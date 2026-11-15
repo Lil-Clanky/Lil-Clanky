@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Hand-drawn sketch: Amsterdam canal houses, a laptop with a bug walking over the screen, a tent next to a tree, and a paper plane flying over.">
+  <defs>
+    <!-- three slightly different wobbles; cycling them gives a hand-animated line -->
+    <filter id="w1" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="w2" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <filter id="w3" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="13" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <path id="route" d="M-40 96 C 180 20 380 130 600 66 S 1000 24 1240 84"/>
+  </defs>
+  <style>
+    .ink { fill: none; stroke: #24292f; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+    .thin { stroke-width: 2; }
+    .boil { filter: url(#w1); animation: boil .66s steps(1) infinite; }
+    @keyframes boil { 0% { filter: url(#w1); } 33% { filter: url(#w2); } 66% { filter: url(#w3); } }
+    .draw path { stroke-dasharray: 1300; stroke-dashoffset: 1300; animation: draw 2.4s ease-out forwards; }
+    .d2 path { animation-delay: .5s; } .d3 path { animation-delay: 1s; } .d4 path { animation-delay: 1.5s; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .marker { stroke: none; opacity: 0; animation: fade 1s ease-out 2.4s forwards; }
+    @keyframes fade { to { opacity: .55; } }
+    .late { opacity: 0; animation: show .6s ease-out 2.8s forwards; }
+    @keyframes show { to { opacity: 1; } }
+    .walk { animation: walk 11s linear 3s infinite; opacity: 0; }
+    @keyframes walk { 0% { transform: translateX(0); opacity: 0; } 5% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(124px); opacity: 0; } }
+    .steam { animation: steam 3s ease-in-out infinite; }
+    .steam.b { animation-delay: 1.5s; }
+    @keyframes steam { 0% { transform: translateY(4px); opacity: 0; } 40% { opacity: .9; } 100% { transform: translateY(-8px); opacity: 0; } }
+    .water { animation: water 5s ease-in-out infinite alternate; }
+    @keyframes water { to { transform: translateX(10px); } }
+    .caret { animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .draw path { stroke-dashoffset: 0; }
+      .marker { opacity: .55; } .late, .walk { opacity: 1; }
+      .plane { display: none; }
+    }
+  </style>
+
+  <g class="boil">
+    <!-- marker colour, a little off the lines on purpose -->
+    <g transform="translate(5 4)">
+      <path class="marker" fill="#f2cc60" d="M790 240 L885 122 L980 240 Z"/>
+      <path class="marker" fill="#8fd18a" d="M1075 196 C1030 196 1022 150 1048 138 C1045 105 1090 95 1104 122 C1135 122 1140 170 1112 182 C1105 198 1085 198 1075 196 Z"/>
+      <path class="marker" fill="#e5534b" d="M885 92 L909 100 L885 108 Z"/>
+      <path class="marker" fill="#f0a25a" d="M140 240 V105 Q140 80 160 78 Q177 55 195 78 Q215 80 215 105 V240 Z"/>
+    </g>
+
+    <!-- ground -->
+    <g class="draw"><path class="ink" d="M40 240 H1160"/></g>
+
+    <!-- canal houses -->
+    <g class="draw">
+      <path class="ink" d="M70 240 V125 L105 85 L140 125 V240"/>
+      <path class="ink" d="M140 240 V105 Q140 80 160 78 Q177 55 195 78 Q215 80 215 105 V240"/>
+      <path class="ink" d="M215 240 V140 L247 100 L280 140 V240"/>
+      <path class="ink thin" d="M85 140 h16 v22 h-16 z M110 140 h16 v22 h-16 z M97 200 h18 v40 h-18 z"/>
+      <path class="ink thin" d="M155 120 h18 v26 h-18 z M183 120 h18 v26 h-18 z M155 165 h18 v26 h-18 z M183 165 h18 v26 h-18 z M168 205 h20 v35 h-20 z"/>
+      <path class="ink thin" d="M228 155 h16 v22 h-16 z M252 155 h16 v22 h-16 z M240 203 h18 v37 h-18 z"/>
+      <path class="ink thin" d="M105 85 v-12 h10"/>
+    </g>
+    <g class="late"><g class="water">
+      <path class="ink thin" style="stroke:#4a9ed6" d="M50 258 q12 -7 24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0 t24 0"/>
+      <path class="ink thin" style="stroke:#4a9ed6" d="M92 274 q12 -7 24 0 t24 0 t24 0 t24 0 t24 0 t24 0"/>
+    </g></g>
+
+    <!-- laptop and mug -->
+    <g class="draw d2">
+      <path class="ink" d="M470 150 h130 q6 0 6 6 v74 q0 6 -6 6 h-130 q-6 0 -6 -6 v-74 q0 -6 6 -6 z"/>
+      <path class="ink" style="stroke-width:5" d="M448 238 H622"/>
+      <path class="ink thin" d="M486 176 l13 9 l-13 9"/>
+      <path class="ink thin" d="M486 212 h52 M546 212 h28"/>
+      <path class="ink" d="M650 204 v28 q0 6 6 6 h16 q6 0 6 -6 v-28 z"/>
+      <path class="ink thin" d="M678 211 q13 0 13 9 q0 9 -13 9"/>
+    </g>
+    <path class="ink thin caret late" d="M506 196 h16"/>
+    <path class="ink thin steam" d="M658 196 q-5 -7 0 -13 q5 -6 0 -13"/>
+    <path class="ink thin steam b" d="M670 196 q-5 -7 0 -13 q5 -6 0 -13"/>
+
+    <!-- the bug -->
+    <g transform="translate(474 139)">
+      <g class="walk">
+        <path d="M-9 0 a9 6 0 1 0 18 0 a9 6 0 1 0 -18 0" fill="#e5534b" stroke="#24292f" stroke-width="2"/>
+        <path class="ink thin" d="M-5 5 l-3 6 M0 6 v6 M5 5 l3 6 M0 -6 v12"/>
+        <path d="M9 0 a3.5 3.5 0 1 0 7 0 a3.5 3.5 0 1 0 -7 0" fill="#24292f" stroke="#24292f" stroke-width="1"/>
+      </g>
+    </g>
+
+    <!-- tent and tree -->
+    <g class="draw d3">
+      <path class="ink" d="M790 240 L885 122 L980 240"/>
+      <path class="ink" d="M885 122 V240"/>
+      <path class="ink thin" d="M885 152 L858 240"/>
+      <path class="ink thin" d="M885 122 V92 L909 100 L885 108"/>
+      <path class="ink thin" d="M812 213 L768 240 M958 213 L1002 240"/>
+      <path class="ink thin" d="M740 240 l-4 -10 M746 240 l1 -12 M752 240 l5 -9 M1020 240 l-3 -9 M1026 240 l3 -11"/>
+      <path class="ink" d="M1075 240 V196"/>
+      <path class="ink" d="M1075 196 C1030 196 1022 150 1048 138 C1045 105 1090 95 1104 122 C1135 122 1140 170 1112 182 C1105 198 1085 198 1075 196 Z"/>
+    </g>
+
+    <!-- paper plane -->
+    <use href="#route" class="ink thin" style="stroke-dasharray:2 14;opacity:.3"/>
+    <g class="plane">
+      <g>
+        <path class="ink thin" d="M0 0 L-34 -13 L-25 0 L-34 13 Z M-25 0 H0"/>
+        <animateMotion dur="17s" begin="0s" repeatCount="indefinite" rotate="auto"><mpath href="#route"/></animateMotion>
+      </g>
+    </g>
+  </g>
+</svg>

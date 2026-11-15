@@ -1,23 +1,12 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=190&section=header&text=Marnix%20de%20Jong&fontSize=46&fontAlignY=35&desc=Breaking%20AI%20for%20fun.%20Fixing%20it%20for%20real.&descAlignY=58" width="100%" alt="Marnix de Jong" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./sketch-dark.svg">
+  <img src="./sketch-light.svg" width="100%" alt="Hand-drawn sketch: Amsterdam canal houses, a laptop with a bug walking over the screen, a tent next to a tree, and a paper plane flying over.">
+</picture>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1200&center=true&vCenter=true&width=640&lines=Red-teamed+Google+Gemini;Building+for+Hermes+Agent+(260k%2B+stars);Shipping+fixes+to+open-source+AI;Built+a+4%2C000-line+Model+Router" alt="What I do" />
-</p>
+Hi, I'm Marnix. I study IT in Amsterdam.
 
-### Hi there 👋
+Most of what I do on here is fixing bugs in AI agent tools, mainly [Hermes Agent](https://github.com/NousResearch/hermes-agent). I also built a model router for it. Before that I spent five months testing Google's Gemini, mostly trying to get it to say things it shouldn't.
 
-- 🔭 Working on open-source AI agents, mostly [Hermes Agent](https://github.com/NousResearch/hermes-agent)
-- 🧭 Built a complete Model Router: routing engine, fallback chains, dashboard and desktop editors
-- 🧪 Spent five months red-teaming Google's Gemini, finding the prompts that make an AI say things it shouldn't
-- 🤖 Made my own AI tools too: a desktop mascot that keeps your PC awake while agents work, and a webcam reader for printed worksheets
-- 💬 Ask me about AI agents, model evaluation, or how to break a chatbot politely
-- ⚡ Fun fact: I co-own a campsite, so I can fix your gateway and your tent pegs
+In summer I help run a small campsite in Noord-Holland, which explains the tent. The paper plane is left over from studying aviation engineering.
 
-### 🧰 Toolbox
-
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white&style=for-the-badge)
-![Rust](https://img.shields.io/badge/Rust-000000?logo=rust&logoColor=white&style=for-the-badge)
-![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white&style=for-the-badge)
-
-<p align="center">📫 <a href="https://www.linkedin.com/in/marnix-dejong-205291240">Say hi on LinkedIn</a></p>
+Mostly Python and TypeScript, a bit of Rust. Easiest way to reach me is [LinkedIn](https://www.linkedin.com/in/marnix-dejong-205291240).
