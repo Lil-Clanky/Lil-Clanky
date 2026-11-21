@@ -5,6 +5,6 @@
 
 Hi, I'm Marnix. I study IT in Haarlem.
 
-In my free time I fix bugs and build tools for AI agents, mainly around Hermes Agent (including a model router for it). Previously spent five months red-teaming Google's Gemini.
+In my free time I fix bugs and build tools for AI agents, mainly around Hermes Agent (including a model router for it). Before that, I spent five months doing safety and adversarial testing on Gemini.
 
 Mostly Python, C# and TypeScript, a bit of Rust and Java. Easiest way to reach me is [LinkedIn](https://www.linkedin.com/in/marnix-dejong-205291240).
